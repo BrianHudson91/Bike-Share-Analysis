@@ -610,8 +610,8 @@ total_trips %>% group_by(member_casual, day) %>%
 
 The trend so far is members tend to ride consistentaly through out the
 week, potentially for work/commuting. The Casual riders drop off heavily
-during the week but more than double during the weekend - more
-extracirricular or for hobbyist.
+during the week but more than double during the weekend - recreational
+use.
 
 # Share
 
@@ -623,7 +623,7 @@ visuals to bring the data to life.
 ``` r
 total_trips %>%  group_by(member_casual, rideable_type) %>% 
   ggplot() + geom_bar(aes(x = rideable_type, fill = member_casual), color = 'black', position = 'dodge') +
-  labs(title = 'Bike Type by Rider') +
+  labs(title = 'Favorite Bike Type by Rider') +
   xlab(label = 'Bike') + ylab(label = 'Total Trips') + theme_bw()
 ```
 
@@ -676,7 +676,7 @@ above:
 
 - Casual riders tend to ride less during the week and overall trips and
   duration of trips more than double on the weekends. This show’s a
-  positive correlation for hobbyist or recreational use.
+  positive correlation for recreational use.
 - Members often ride consistently during the work days and less on the
   weekends, showing a correlation to work commute.
 - While both casual and members ride significantly less between
@@ -698,9 +698,9 @@ Considering the following questions:
     annual membership vs day-to-day costs.
 2.  The busiest months for casual riders are between June and September,
     use limited-time promotions/discounts during this time to increase
-    conversion rate.
-3.  Create discounts on the annual membership if riders bike past a
-    certain threshold each month; This will further increase the
-    conversion rate since they are already biking heavily on the
-    weekends and would actually encourage members as well to bike more
-    during the weekend.
+    the conversion rate.
+3.  Create discounts/credit-back on the annual membership if riders bike
+    past a certain threshold each month;this can positively affect the
+    conversion rate casuals are already biking heavily on the weekends -
+    could potentially encourage members to bike more during the weekend
+    as well.
